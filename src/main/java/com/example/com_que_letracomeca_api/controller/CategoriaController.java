@@ -12,6 +12,10 @@ import java.util.List;
 public class CategoriaController {
     @Autowired
     CategoriaRepository repository;
+    @GetMapping("/teste")
+    public String chamaa(){
+        return "lalalala";
+    }
     @GetMapping
     public ResponseEntity<List<CategoriaDocument>> findAll() {
         return ResponseEntity.ok(repository.findAll());
